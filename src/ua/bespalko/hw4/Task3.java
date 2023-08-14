@@ -2,18 +2,20 @@ package ua.bespalko.hw4;//Заполнить одномерный массив �
 //• Все четные значения заменить на нули. Размер массива - 2000 элементов.
 
 import java.util.Random;
+import java.util.Arrays;
+
 public class Task3 {
     public static void main(String[] args) {
         int[] array = new int[2000];
 
-        // Заповнення масиву випадковими цілими числами в межах від 1 до 1000
+        // Заполнение массива случайными целыми числами в диапазоне от 1 до 1000
         fillArrayWithRandomValues(array, 1000);
 
-        // Заміна всіх парних значень на нулі
-        replaceEvenWithZeros(array);
+        // Замена всех четных значений на нули и получение копии массива
+        int[] modifiedArray = replaceEvenWithZeros(array.clone());
 
-        // Виведення масиву у консоль
-        for (int num : array) {
+        // Вывод модифицированной копии массива в консоль
+        for (int num : modifiedArray) {
             System.out.print(num + " ");
         }
     }
@@ -26,11 +28,13 @@ public class Task3 {
         }
     }
 
-    public static void replaceEvenWithZeros(int[] array) {
+    public static int[] replaceEvenWithZeros(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 array[i] = 0;
             }
         }
+        return array;
     }
 }
+
