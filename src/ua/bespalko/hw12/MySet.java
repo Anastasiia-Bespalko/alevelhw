@@ -9,6 +9,8 @@ package ua.bespalko.hw12;
 //- toString() - массив в строку
 
 import java.util.Arrays;
+import java.util.Objects;
+
 public class MySet<T> {
     private Object[] array;
     private int size;
@@ -23,14 +25,14 @@ public class MySet<T> {
 
     public boolean add(T element) {
         if (contains(element)) {
-            return false; // Element already exists, not added
+            return false;
         }
         if (size == array.length) {
             resizeArray();
         }
         array[size] = element;
         size++;
-        return true; // Element added successfully
+        return true;
     }
 
     private void resizeArray() {
@@ -47,10 +49,7 @@ public class MySet<T> {
 
     private boolean contains(T element) {
         for (int i = 0; i < size; i++) {
-            if (array[i] == null && element == null) {
-                return true;
-            }
-            if (array[i] != null && array[i].equals(element)) {
+            if (Objects.equals(array[i], element)) {
                 return true;
             }
         }
@@ -75,7 +74,7 @@ public class MySet<T> {
         set.add(1);
         set.add(2);
         set.add(3);
-        set.add(2); // Not added due to duplication
+        set.add(2);
         set.add(4);
         set.add(5);
 
