@@ -45,10 +45,10 @@ public class Vector {
         return new Vector(newX, newY, newZ);
     }
 
-    public static Vector[] generateRandomVectors(int N) {
+    public static Vector[] generateRandomVectors(int n) {
         Random random = new Random();
-        Vector[] vectors = new Vector[N];
-        for (int i = 0; i < N; i++) {
+        Vector[] vectors = new Vector[n];
+        for (int i = 0; i < n; i++) {
             double x = random.nextDouble();
             double y = random.nextDouble();
             double z = random.nextDouble();
@@ -84,3 +84,4 @@ public class Vector {
         }
     }
 }
+

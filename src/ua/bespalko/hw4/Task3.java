@@ -11,10 +11,10 @@ public class Task3 {
         // Заполнение массива случайными целыми числами в диапазоне от 1 до 1000
         fillArrayWithRandomValues(array, 1000);
 
-        // Замена всех четных значений на нули и получение копии массива
-        int[] modifiedArray = replaceEvenWithZeros(array.clone());
+        // Замена всех четных значений на нули и получение модифицированного массива
+        int[] modifiedArray = replaceEvenWithZeros(array);
 
-        // Вывод модифицированной копии массива в консоль
+        // Вывод модифицированного массива в консоль
         for (int num : modifiedArray) {
             System.out.print(num + " ");
         }
@@ -29,12 +29,14 @@ public class Task3 {
     }
 
     public static int[] replaceEvenWithZeros(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                array[i] = 0;
+        int[] copiedArray = array.clone();
+
+        for (int i = 0; i < copiedArray.length; i++) {
+            if (copiedArray[i] % 2 == 0) {
+                copiedArray[i] = 0;
             }
         }
-        return array;
+        return copiedArray;
     }
 }
 
