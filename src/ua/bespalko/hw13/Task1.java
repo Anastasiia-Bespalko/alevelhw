@@ -28,15 +28,26 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите текст (для завершения введите 'end'): ");
+        StringBuilder currentLine = new StringBuilder();
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("end")) {
                 break;
             } else if (input.equals("next")) {
-                lines.add(""); // Добавляем пустую строку для перехода на следующую строку в CSV
+                if (currentLine.length() > 0) {
+                    lines.add(currentLine.toString());
+                    currentLine.setLength(0); // Очищаємо поточний рядок
+                }
             } else {
-                lines.add(input);
+                if (currentLine.length() > 0) {
+                    currentLine.append(", "); // Додаємо кому, якщо рядок не порожній
+                }
+                currentLine.append(input);
             }
+        }
+
+        if (currentLine.length() > 0) {
+            lines.add(currentLine.toString());
         }
 
         try {
@@ -50,7 +61,7 @@ public class Task1 {
     private static void writeCSV(List<String> lines, String fileName) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             for (String line : lines) {
-                writer.write(line.replaceAll(",", "") + ",");
+                writer.write(line);
                 writer.newLine();
             }
         }
