@@ -20,7 +20,7 @@ public class Test4 {
         productCatalog.click();
 
         WebElement menuMedicines = webDriver.findElement(By.xpath("//*[@id=\"wrap\"]/div[3]/div/div/div[1]/ul/li[4]/a"));
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10)); // Используйте Duration.ofSeconds для установки времени ожидания
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
 
         WebElement medicinalProducts = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='menu-catalog__item'][1]")));
         webDriver.close();
