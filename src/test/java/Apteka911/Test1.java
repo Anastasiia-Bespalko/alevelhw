@@ -1,6 +1,5 @@
 package Apteka911;
 
-import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import com.github.javafaker.Faker;
 import java.util.concurrent.TimeUnit;
-
 
 import static org.junit.Assert.assertTrue;
 

@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
+import org.junit.Assert;
 
 public class Test4 {
     public static void main(String[] args) {
@@ -23,6 +24,8 @@ public class Test4 {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
 
         WebElement medicinalProducts = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='menu-catalog__item'][1]")));
+        Assert.assertNotNull("Element medicinalProducts is not found", medicinalProducts);
+
         webDriver.close();
     }
 }

@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Test2 {
     public static void main(String[] args) {
@@ -13,12 +16,13 @@ public class Test2 {
         webDriver.manage().window().maximize();
         webDriver.manage().deleteAllCookies();
         webDriver.navigate().to("https://apteka911.ua/ua");
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Duration timeout = Duration.ofSeconds(30);
+        WebDriverWait wait = new WebDriverWait(webDriver, timeout);
 
-        WebElement input = webDriver.findElement(By.xpath("//a[@class='personal-area__user-name']"));
+        WebElement input = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='personal-area__user-name']")));
         input.click();
 
-        WebElement login = webDriver.findElement(By.xpath("//a[@class='personal-area__user-login']"));
+        WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='personal-area__user-login']")));
         login.click();
 
         WebElement emailOrNumber = webDriver.findElement(By.xpath("//input[@type='text'][@name='login']"));
@@ -28,10 +32,14 @@ public class Test2 {
         password.click();
         password.sendKeys("password");
 
-        WebElement entry = webDriver.findElement(By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']"));
+        WebElement entry = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']")));
         entry.click();
 
-        webDriver.close();
+        WebElement accountInfo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='personal-area__user-name']")));
+        assert accountInfo.isDisplayed() : "Вход не выполнен успешно";
 
+        webDriver.close();
     }
 }
+
+
