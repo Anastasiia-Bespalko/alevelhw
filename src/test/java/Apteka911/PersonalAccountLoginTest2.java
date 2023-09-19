@@ -9,14 +9,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Test2 {
+public class PersonalAccountLoginTest2 {
     public static void main(String[] args) {
         WebDriver webDriver = new ChromeDriver();
 
         webDriver.manage().window().maximize();
-        webDriver.manage().deleteAllCookies();
         webDriver.navigate().to("https://apteka911.ua/ua");
-        Duration timeout = Duration.ofSeconds(30);
+        Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(webDriver, timeout);
 
         WebElement input = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='personal-area__user-name']")));
@@ -29,7 +28,6 @@ public class Test2 {
         emailOrNumber.sendKeys("bespalko140300@gmail.com");
 
         WebElement password = webDriver.findElement(By.xpath("//input[@name='password']"));
-        password.click();
         password.sendKeys("password");
 
         WebElement entry = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']")));
