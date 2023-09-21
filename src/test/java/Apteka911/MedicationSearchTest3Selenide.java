@@ -22,7 +22,8 @@ public class MedicationSearchTest3Selenide {
         SelenideElement searchResult = $x("//h1[contains(text(),'Спазмалгон')]");
         String expectedText = "Спазмалгон";
 
-        Assert.assertEquals("Спазмалгон", searchResult.text());
+        String actualText = searchResult.text();
+        Assert.assertEquals(expectedText, actualText);
         Selenide.closeWindow();
 
     }

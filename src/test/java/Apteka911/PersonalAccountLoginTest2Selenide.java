@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -18,8 +19,8 @@ public class PersonalAccountLoginTest2Selenide {
         SelenideElement login = Selenide.$x("//a[@class='personal-area__user-login']");
         login.click();
 
-        SelenideElement emainOrNumber = Selenide.$x("//input[@type='text'][@name='login']");
-        emainOrNumber.setValue("bespalko140300@gmail.com");
+        SelenideElement emailOrNumber = Selenide.$x("//input[@type='text'][@name='login']");
+        emailOrNumber.setValue("bespalko140300@gmail.com");
 
         SelenideElement password = Selenide.$x("//input[@name='password']");
         password.setValue("password");
@@ -31,7 +32,7 @@ public class PersonalAccountLoginTest2Selenide {
         successfulLogin.shouldBe(Condition.visible);
 
         SelenideElement userLink = $x("//a[@class='personal-area__user-name']");
-        assert userLink.is(Condition.visible) : "Элемент не отображается после входа";
+        Assert.assertTrue(userLink.is(Condition.visible), "Элемент не отображается после входа");
 
 
         Selenide.closeWindow();

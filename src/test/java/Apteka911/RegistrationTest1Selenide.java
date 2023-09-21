@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import com.github.javafaker.Faker;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -14,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class RegistrationTest1Selenide {
     public static void main(String[] args) {
+        String expectedErrorMessage = "Не всі обов'язкові поля заповнені або помилка введення даних";
         Selenide.open("https://apteka911.ua/ua");
         WebDriverRunner.getWebDriver().manage().window().maximize();
         Selenide.clearBrowserLocalStorage();
@@ -31,28 +33,28 @@ public class RegistrationTest1Selenide {
         SelenideElement registration = $x("//a[@class='personal-area__register']").shouldBe(visible);
         registration.click();
 
-        SelenideElement name = $x("//input[@type='text'][@name='userFirstname']").should(Condition.appear, Duration.ofSeconds(10));
+        SelenideElement name = $x("//input[@type='text'][@name='userFirstname']").should(Condition.appear);
         name.setValue(firstName);
 
-        SelenideElement lastName1 = $x("//input[@type='text'][@name='userLastname']");
-        lastName1.should(Condition.appear, Duration.ofSeconds(10)).setValue(lastName);
+        SelenideElement lastElement = $x("//input[@type='text'][@name='userLastname']");
+        lastElement.should(Condition.appear, Duration.ofSeconds(10)).setValue(lastName);
 
         SelenideElement phone = $x("//input[@name='userPhone']");
         phone.should(Condition.appear, Duration.ofSeconds(10)).setValue(phoneNumber);
 
-        SelenideElement email1 = $x("//input[@type='text'][@name='userEmail']");
-        email1.should(Condition.appear, Duration.ofSeconds(10)).setValue(email);
+        SelenideElement emailElement = $x("//input[@type='text'][@name='userEmail']");
+        emailElement.should(Condition.appear, Duration.ofSeconds(10)).setValue(email);
 
-        SelenideElement password1 = $x("//input[@type='password'][@name='password1']");
-        password1.should(Condition.appear, Duration.ofSeconds(10)).setValue(password);
+        SelenideElement passwordElement = $x("//input[@type='password'][@name='password1']");
+        passwordElement.should(Condition.appear, Duration.ofSeconds(10)).setValue(password);
 
         $(".btn.btn-accent.btn-m.btn_mw-180").click();
 
-        $("p.alert.alert-error").should(Condition.appear, Duration.ofSeconds(10));
+        $("p.alert.alert-error").should(Condition.appear);
 
-        String expectedErrorMessage = "Не всі обов'язкові поля заповнені або помилка введення даних";
+
         String actualErrorMessage = $("p.alert.alert-error").text();
-        assert actualErrorMessage.contains(expectedErrorMessage) : "Сообщение об ошибке не соответствует ожидаемому.";
+        Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage), "Сообщение об ошибке не соответствует ожидаемому: " + actualErrorMessage);
 
         Selenide.closeWindow();
     }
