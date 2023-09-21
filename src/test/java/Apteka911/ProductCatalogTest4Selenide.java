@@ -21,7 +21,7 @@ public class ProductCatalogTest4Selenide {
         SelenideElement medicinalProducts = $x("//*[@id=\"wrap\"]/div[3]/div/div/div[1]/ul/li[4]/a");
         medicinalProducts.hover();
 
-        SelenideElement catalogMenu = $x("//div[@class='fl j-main-catalog-menu main-catalog-menu']");
+        SelenideElement catalogMenu = $x("//*[@id=\"wrap\"]/div[3]/div/div/div[2]/div");
 
         Assert.assertTrue(catalogMenu.should(Condition.appear).is(Condition.visible));
 
