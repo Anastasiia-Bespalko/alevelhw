@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Positive tests">
+    <test name="Tests">
+        <groups>
+            <run>
+                <include name="positive" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.SearchProduct"/>
+            <class name="TestNG.ProductInBasket"/>
+            <class name="TestNG.RozetkaProductSortingTest"/>
+            <class name="TestNG.RozetkaCategorySearchTest"/>
+        </classes>
+    </test>
+</suite>
