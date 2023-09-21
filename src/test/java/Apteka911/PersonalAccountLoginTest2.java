@@ -1,5 +1,6 @@
 package Apteka911;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
 
 public class PersonalAccountLoginTest2 {
     public static void main(String[] args) {
@@ -33,8 +35,8 @@ public class PersonalAccountLoginTest2 {
         WebElement entry = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']")));
         entry.click();
 
-        WebElement accountInfo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='personal-area__user-name']")));
-        assert accountInfo.isDisplayed() : "Вход не выполнен успешно";
+        WebElement accountInfo = webDriver.findElement(By.xpath("//a[@class='personal-area__user-name']"));
+        Assert.assertTrue("Вход не выполнен успешно", accountInfo.isDisplayed());
 
         webDriver.close();
     }

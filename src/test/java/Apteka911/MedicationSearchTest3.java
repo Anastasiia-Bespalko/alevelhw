@@ -22,16 +22,17 @@ public class MedicationSearchTest3 {
                 .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(org.openqa.selenium.NoSuchElementException.class);
 
+        String searchQuery = "Спазмалгон";
+
         WebElement search = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='search']")));
-        search.click();
-        search.sendKeys("Спазмалгон");
+        search.sendKeys(searchQuery);
 
         WebElement buttonSearch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='b-search__button-icon icon-search']")));
         buttonSearch.click();
 
         WebElement searchResult = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h1[text()='Спазмалгон']")));
 
-        String expectedText = "Спазмалгон";
+        String expectedText = searchQuery;
         String actualText = searchResult.getText();
         Assert.assertEquals(expectedText, actualText);
 

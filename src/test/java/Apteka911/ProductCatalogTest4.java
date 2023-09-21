@@ -22,7 +22,7 @@ public class ProductCatalogTest4 {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
 
         WebElement medicinalProducts = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"wrap\"]/div[3]/div/div/div[1]/ul/li[4]/a")));
-        Assert.assertNotNull("Element medicinalProducts is not found", medicinalProducts);
+        Assert.assertTrue("Element medicinalProducts is not displayed", medicinalProducts.isDisplayed());
 
         webDriver.close();
     }
