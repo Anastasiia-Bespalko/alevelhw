@@ -35,7 +35,7 @@ public class PersonalAccountLogin {
         SelenideElement errorInput = $x("//p[@class='error-message error-message_color_red']");
         errorInput.shouldBe(Condition.visible);
 
-        Assert.assertTrue(errorInput.is(Condition.visible), "ошибка");
+        Assert.assertTrue(errorInput.is(Condition.visible), "Сообщение об ошибке должно быть видно на странице входа в систему.");
     }
     @AfterMethod
     public void AfterMethod() {

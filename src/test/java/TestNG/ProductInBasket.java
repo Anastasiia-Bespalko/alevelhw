@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ProductInBasket {
@@ -24,7 +25,8 @@ public class ProductInBasket {
         SelenideElement find = $x("//button[@class='button button_color_green button_size_medium search-form__submit']");
         find.click();
 
-        SelenideElement laptop = $x("/html/body/app-root/div/div/rz-search/rz-catalog/div/div[2]/section/rz-grid/ul/li[1]/rz-catalog-tile/app-goods-tile-default/div/div[2]/a[2]/span");
+        SelenideElement laptop = $("a[href=\"https://rozetka.com.ua/asus-90nr0704-m00cw0/p351781200/\"].goods-tile__heading");
+        String expectedLaptop = laptop.getText();
 
         SelenideElement buy = $x("//button[@class='buy-button goods-tile__buy-button ng-star-inserted']");
         buy.click();
@@ -34,7 +36,7 @@ public class ProductInBasket {
 
         SelenideElement nameInBasket = $x("//a[@class='cart-product__title']");
 
-        String expectedLaptop = laptop.getText();
+
         String actualNameInBasket = nameInBasket.getText();
         Assert.assertEquals(expectedLaptop, actualNameInBasket);
 
