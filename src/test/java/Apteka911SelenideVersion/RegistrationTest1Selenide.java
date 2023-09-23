@@ -1,4 +1,4 @@
-package Apteka911;
+package Apteka911SelenideVersion;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
@@ -6,8 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import com.github.javafaker.Faker;
 import org.testng.Assert;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;

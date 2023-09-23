@@ -1,4 +1,4 @@
-package Apteka911;
+package Apteka911SelenideVersion;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
