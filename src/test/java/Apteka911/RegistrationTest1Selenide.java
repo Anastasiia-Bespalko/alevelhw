@@ -37,16 +37,16 @@ public class RegistrationTest1Selenide {
         name.setValue(firstName);
 
         SelenideElement lastElement = $x("//input[@type='text'][@name='userLastname']");
-        lastElement.should(Condition.appear, Duration.ofSeconds(10)).setValue(lastName);
+        lastElement.should(Condition.appear).setValue(lastName);
 
         SelenideElement phone = $x("//input[@name='userPhone']");
-        phone.should(Condition.appear, Duration.ofSeconds(10)).setValue(phoneNumber);
+        phone.should(Condition.appear).setValue(phoneNumber);
 
         SelenideElement emailElement = $x("//input[@type='text'][@name='userEmail']");
-        emailElement.should(Condition.appear, Duration.ofSeconds(10)).setValue(email);
+        emailElement.should(Condition.appear).setValue(email);
 
         SelenideElement passwordElement = $x("//input[@type='password'][@name='password1']");
-        passwordElement.should(Condition.appear, Duration.ofSeconds(10)).setValue(password);
+        passwordElement.should(Condition.appear).setValue(password);
 
         $(".btn.btn-accent.btn-m.btn_mw-180").click();
 
