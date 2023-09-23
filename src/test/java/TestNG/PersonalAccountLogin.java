@@ -12,13 +12,13 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PersonalAccountLogin {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod(){
         Selenide.open("https://rozetka.com.ua/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
     @Test(groups = "negative")
-    public void FirstTest() {
+    public void TestLogin() {
 
         SelenideElement input = $x("//button[@class='header__button ng-star-inserted']");
         input.click();

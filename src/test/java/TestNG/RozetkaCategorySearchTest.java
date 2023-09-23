@@ -12,18 +12,18 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RozetkaCategorySearchTest {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod(){
         Selenide.open("https://rozetka.com.ua/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
     @Test(groups = "positive")
-    public void TestFive() {
+    public void testMobileTelephonesCategory() {
 
-        SelenideElement telephones = $x("//a[contains(text(),'Смартфони, ТВ і електроніка')]");
+        SelenideElement telephones = $x("//ul[@class='menu-categories menu-categories_type_main'] //a[text()='Смартфони, ТВ і електроніка']");
         telephones.click();
 
-        SelenideElement mobileTelephones = $x("/html/body/app-root/div/div/rz-super-portal/div/main/section/div[2]/rz-dynamic-widgets/rz-widget-list[1]/section/ul/li[1]/rz-list-tile/div/a[2]");
+        SelenideElement mobileTelephones = $x("//ul[@class='portal-grid portal-grid_type_1_4'] //a[@class='tile-cats__heading tile-cats__heading_type_center ng-star-inserted']");
         mobileTelephones.click();
 
         SelenideElement categoryCorrectness = $x("//h1[@class='catalog-heading ng-star-inserted']");

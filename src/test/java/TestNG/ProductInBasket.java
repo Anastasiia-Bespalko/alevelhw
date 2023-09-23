@@ -12,13 +12,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ProductInBasket {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod(){
         Selenide.open("https://rozetka.com.ua/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
     @Test(groups = "positive")
-    public void ThirdTest() {
+    public void testAddProductToBasket() {
         SelenideElement search = $x("//input[@class='search-form__input ng-untouched ng-pristine ng-valid']");
         search.setValue("Ноутбук ASUS TUF Gaming F15 FX506HE-HN012");
 
