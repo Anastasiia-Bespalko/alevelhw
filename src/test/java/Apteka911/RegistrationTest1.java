@@ -1,6 +1,5 @@
 package Apteka911;
 
-import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,18 +8,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import com.github.javafaker.Faker;
 import java.util.concurrent.TimeUnit;
 
-
 import static org.junit.Assert.assertTrue;
 
 
-public class Test1 {
+public class RegistrationTest1 {
     public static void main(String[] args) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
 
         WebDriver webDriver = new ChromeDriver(options);
         webDriver.manage().window().maximize();
-        webDriver.manage().deleteAllCookies();
         webDriver.navigate().to("https://apteka911.ua/ua");
         Faker faker = new Faker();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -31,11 +28,9 @@ public class Test1 {
         registration.click();
 
         WebElement name = webDriver.findElement(By.xpath("//input[@type='text'][@name='userFirstname']"));
-        name.click();
         name.sendKeys(faker.name().firstName());
 
         WebElement lastName = webDriver.findElement(By.xpath("//input[@type='text'][@name='userLastname']"));
-        lastName.click();
         lastName.sendKeys(faker.name().lastName());
 
         WebElement phone = webDriver.findElement(By.xpath("//input[@name='userPhone']"));
