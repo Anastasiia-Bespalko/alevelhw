@@ -26,8 +26,6 @@ public class SearchProduct {
         find.click();
 
         SelenideElement price = $x("//div[@class='goods-tile__price price--red ng-star-inserted'] //span[@class='goods-tile__price-value']");
-        SelenideElement priceInBasket = null;
-        String actualPriceInBasket = priceInBasket.getText();
 
         SelenideElement addToCartButton = $x("//app-buy-button[@class='toOrder ng-star-inserted'] //button[@class='buy-button goods-tile__buy-button ng-star-inserted']");
         addToCartButton.should(Condition.visible).click();
@@ -35,9 +33,11 @@ public class SearchProduct {
         SelenideElement basket = $x("//button[@class='header__button ng-star-inserted header__button--active']");
         basket.click();
 
-        priceInBasket = $x("//div[@class='cart-receipt__sum-price']");
-
+        SelenideElement priceInBasket = $x("//div[@class='cart-receipt__sum']");
+        priceInBasket.should(Condition.visible);
+        String actualPriceInBasket = priceInBasket.getText();
         String expectedPrice = price.getText();
+
         Assert.assertEquals(expectedPrice, actualPriceInBasket);
     }
     @AfterMethod
