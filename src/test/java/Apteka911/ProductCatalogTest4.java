@@ -1,3 +1,4 @@
+
 package Apteka911;
 
 import org.openqa.selenium.By;
@@ -27,4 +28,3 @@ public class ProductCatalogTest4 {
         webDriver.close();
     }
 }
-

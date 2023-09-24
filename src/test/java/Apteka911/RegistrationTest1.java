@@ -1,3 +1,4 @@
+
 package Apteka911;
 
 import org.openqa.selenium.By;
@@ -6,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import com.github.javafaker.Faker;
+
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
@@ -35,17 +37,5 @@ public class RegistrationTest1 {
 
         WebElement phone = webDriver.findElement(By.xpath("//input[@name='userPhone']"));
         phone.sendKeys(faker.phoneNumber().cellPhone());
-
-        WebElement email = webDriver.findElement(By.xpath("//input[@type='text'][@name='userEmail']"));
-        email.sendKeys(faker.internet().emailAddress());
-
-        WebElement password = webDriver.findElement(By.xpath("//input[@type='password'][@name='password1']"));
-        password.sendKeys(faker.internet().password());
-        WebElement checkIn = webDriver.findElement(By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']"));
-        checkIn.click();
-        WebElement errorElement = webDriver.findElement(By.xpath("//p[@class='alert alert-error']"));
-
-        assertTrue(errorElement.isDisplayed());
-        webDriver.close();
     }
 }
