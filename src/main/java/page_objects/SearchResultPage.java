@@ -13,7 +13,7 @@ public class SearchResultPage {
 
     private final By SEARCH_RESULTS = By.xpath("//div[@class='search__title']");
     private final By CHARGING_STATION_BUTTON = By.xpath("//div[@class='navigation-block'] //div[@class='section-navigation__item content']");
-
+    private final By SEARCH_RESULT_PAGE_TITLE = By.xpath("//div[@class='search__title']");
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -29,6 +29,10 @@ public class SearchResultPage {
     public void chargingStationsClick() {
         waitUntilElementVisibility(CHARGING_STATION_BUTTON);
         driver.findElement(CHARGING_STATION_BUTTON).click();
+    }
+
+    public String getSearchResultPageTitle() {
+        return driver.findElement(SEARCH_RESULT_PAGE_TITLE).getText();
     }
 
 
