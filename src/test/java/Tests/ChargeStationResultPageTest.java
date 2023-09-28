@@ -23,8 +23,6 @@ public class ChargeStationResultPageTest extends BaseTest {
 
         ProductDetailsChargePage productDetailsChargePage = new ProductDetailsChargePage(getWebDriver());
 
-        productDetailsChargePage.isTitleContainsText(expectedTitle);
-
         Assert.assertTrue(productDetailsChargePage.isTitleContainsText(expectedTitle), "Заголовок не содержит ожидаемый текст: " + expectedTitle);
     }
 }

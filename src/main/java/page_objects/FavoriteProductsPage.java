@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class FavoriteProductsPage extends BasePage{
 
-    private final By PRODUCT_IS_DISPLAYED = By.cssSelector("label[title='Смартфон Samsung Galaxy A54 5G 8/256GB  Awesome Graphite (SM-A546EZKD)']");
+    private final By PRODUCT_IS_DISPLAYED = By.cssSelector("//div[@class='row'] //a[@title='Смартфон Samsung Galaxy A54 5G 8/256GB  Awesome Graphite (SM-A546EZKD)']");
 
     public FavoriteProductsPage(WebDriver driver) {
         super(driver);
