@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
-import org.junit.Assert;
 
 public class ProductCatalogTest4 {
     public static void main(String[] args) {
