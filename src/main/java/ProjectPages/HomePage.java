@@ -3,7 +3,7 @@ package ProjectPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
     private final By INPUT_BUTTON = By.xpath("//a[@class='personal-area__user-name']");
     private final By INPUT_POP_UP_REGISTRATION_BUTTON = By.xpath("//a[@class='personal-area__register']");
     private final By NAME_BUTTON_IN_REGISTRATION = By.xpath("//input[@type='text'][@name='userFirstname']");
@@ -13,6 +13,11 @@ public class HomePage extends BasePage{
     private final By PASSWORD_BUTTON_iN_REGISTRATION = By.xpath("//input[@type='password'][@name='password1']");
     private final By CHECK_IN = By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']");
     private final By ERROR_ELEMENT_IN_REGISTRATION = By.xpath("//p[@class='alert alert-error']");
+    private final By INPUT_POP_UP_LOGIN_BUTTON = By.xpath("//a[@class='personal-area__user-login']");
+    private final By EMAIL_OR_NUMBER_BUTTON = By.xpath("//input[@type='text'][@name='login']");
+    private final By PASSWORD_BUTTON_IN_INPUT = By.xpath("//input[@name='password']");
+    private final By ENTRY_BUTTON_IN_INPUT = By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']");
+    private final By MASSAGE_THAT_LOGIN_IS_SUCCESSFUL = By.xpath("//a[@class='personal-area__user-name']");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -58,4 +63,28 @@ public class HomePage extends BasePage{
         return getDriver().findElement(ERROR_ELEMENT_IN_REGISTRATION).isDisplayed();
     }
 
+    public void clickOnLoginButton() {
+        waitUntilElementVisibility(INPUT_POP_UP_LOGIN_BUTTON);
+        getDriver().findElement(INPUT_POP_UP_LOGIN_BUTTON).click();
+    }
+
+    public void enterEmailOrNumberButton() {
+        getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys("bespalko140300@gmail.com");
+    }
+
+    public void enterPasswordButton() {
+        getDriver().findElement(PASSWORD_BUTTON_IN_INPUT).sendKeys("password");
+    }
+
+    public void inputInPersonalAccountClick() {
+        waitUntilElementVisibility(ENTRY_BUTTON_IN_INPUT);
+        getDriver().findElement(ENTRY_BUTTON_IN_INPUT).click();
+    }
+
+    public boolean isMassageOfInputDisplayed() {
+        waitUntilElementVisibility(MASSAGE_THAT_LOGIN_IS_SUCCESSFUL);
+        return getDriver().findElement(MASSAGE_THAT_LOGIN_IS_SUCCESSFUL).isDisplayed();
+
+    }
 }
+
