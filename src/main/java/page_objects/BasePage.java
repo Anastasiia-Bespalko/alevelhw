@@ -14,11 +14,11 @@ public class BasePage {
         this.driver = driver;
 
     }
-
     public void waitUntilElementVisibility(By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
+
     public WebDriver getDriver() {
         return driver;
     }

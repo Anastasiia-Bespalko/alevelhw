@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class SearchResultChargePage extends BasePage{
+public class ProductDetailsChargePage extends BasePage{
     private final By TITLE = By.xpath("//h1[@class='title__main']");
 
-    public SearchResultChargePage(WebDriver driver) {
+    public ProductDetailsChargePage(WebDriver driver) {
         super(driver);
     }
 

@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import page_objects.HomePage;
 
 
-public class ComparisonPopUpElementPageTest extends BaseTest {
+public class PopUpElementLanguageTest extends BaseTest {
 
     @Test
-    public void ComparisonPopUpElementPageTest() {
+    public void popUpElementLanguageTest() {
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.popUpComparisonButtonClick();
+        homePage.popUpLanguageButtonClick();
         Assert.assertTrue(homePage.isPopUpDisplayed());
     }
 }

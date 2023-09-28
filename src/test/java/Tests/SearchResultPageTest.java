@@ -2,8 +2,7 @@ package Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page_objects.HomePage;
-import page_objects.SearchResultPage;
+import page_objects.*;
 
 public class SearchResultPageTest extends BaseTest{
 
@@ -12,20 +11,31 @@ public class SearchResultPageTest extends BaseTest{
         HomePage homePage = new HomePage(getWebDriver());
         homePage.clickOnEnergyButton();
 
-        SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
-        searchResultPage.chargingStationsClick();
+        EnergySupplyPage energySupplyPage = new EnergySupplyPage(getWebDriver());
+        energySupplyPage.chargingStationsClick();
+
+        ChargeStationResultPage chargeStationResultPage = new ChargeStationResultPage(getWebDriver());
+        Assert.assertTrue(chargeStationResultPage.isChargingStationTitleDisplayed(), "Элемент не найден");
     }
 
     @Test
-    public void verifyThatSearchResultPageTitleIsCorrect() {
+    public void AddToFavoriteTest() {
         String wordToSearch = "Samsung";
         HomePage homePage = new HomePage(getWebDriver());
-
         homePage.searchProductWithEnterKey(wordToSearch);
 
         SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
-        String actualSearchResultPageTitle = searchResultPage.getSearchResultPageTitle();
+        searchResultPage.clickOnTelephoneButton(1);
 
-        Assert.assertTrue(actualSearchResultPageTitle.contains(wordToSearch));
+        SamsungTelephonePage samsungTelephonePage = new SamsungTelephonePage(getWebDriver());
+        samsungTelephonePage.personalListButtonClick();
+        samsungTelephonePage.clickOnButtonWant();
+        samsungTelephonePage.closeWantPopUpClick();
+        samsungTelephonePage.clickOnTheWantButton(2);
+        samsungTelephonePage.checkThatTheItemHasBeenAddedToWantButton();
+
+        FavoriteProductsPage favoriteProductsPage = new FavoriteProductsPage(getWebDriver());
+        Assert.assertTrue(favoriteProductsPage.isProductDisplayed(), "Элемент не найден");
+
     }
 }

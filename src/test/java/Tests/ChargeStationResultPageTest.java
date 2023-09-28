@@ -2,11 +2,7 @@ package Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page_objects.ChargeStationResultPage;
-import page_objects.HomePage;
-import page_objects.SearchResultChargePage;
-import page_objects.SearchResultPage;
-
+import page_objects.*;
 
 
 public class ChargeStationResultPageTest extends BaseTest {
@@ -14,20 +10,21 @@ public class ChargeStationResultPageTest extends BaseTest {
     @Test
     public void titleIsCorrect() {
 
+        String expectedTitle = "Зарядна станція";
+
         HomePage homePage = new HomePage(getWebDriver());
         homePage.clickOnEnergyButton();
 
-        SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
-        searchResultPage.chargingStationsClick();
+        EnergySupplyPage energySupplyPage = new EnergySupplyPage(getWebDriver());
+        energySupplyPage.chargingStationsClick();
 
         ChargeStationResultPage chargeStationResultPage = new ChargeStationResultPage(getWebDriver());
         chargeStationResultPage.clickOnComparePricesButton(2);
 
-        SearchResultChargePage searchResultChargePage = new SearchResultChargePage(getWebDriver());
+        ProductDetailsChargePage productDetailsChargePage = new ProductDetailsChargePage(getWebDriver());
 
-        String expectedTitle = "Зарядна станція";
-        searchResultChargePage.isTitleContainsText(expectedTitle);
+        productDetailsChargePage.isTitleContainsText(expectedTitle);
 
-        Assert.assertTrue(searchResultChargePage.isTitleContainsText(expectedTitle), "Заголовок не содержит ожидаемый текст: " + expectedTitle);
+        Assert.assertTrue(productDetailsChargePage.isTitleContainsText(expectedTitle), "Заголовок не содержит ожидаемый текст: " + expectedTitle);
     }
 }
