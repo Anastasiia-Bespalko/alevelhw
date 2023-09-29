@@ -1,7 +1,10 @@
 package ProjectPages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class HomePage extends BasePage {
     private final By INPUT_BUTTON = By.xpath("//a[@class='personal-area__user-name']");
@@ -18,7 +21,9 @@ public class HomePage extends BasePage {
     private final By PASSWORD_BUTTON_IN_INPUT = By.xpath("//input[@name='password']");
     private final By ENTRY_BUTTON_IN_INPUT = By.xpath("//input[@class='btn btn-accent btn-m btn_mw-180']");
     private final By MASSAGE_THAT_LOGIN_IS_SUCCESSFUL = By.xpath("//a[@class='personal-area__user-name']");
-
+    private final By SEARCH = By.xpath("//input[@id='search']");
+    private final By MEDICINAL_PRODUCT_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/shop/lekarstvennyie-preparatyi']");
+    private final By MEDICINAL_PRODUCTS_POP_UP = By.xpath("//div[@class='mc__sub-dropdown']");
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -86,5 +91,24 @@ public class HomePage extends BasePage {
         return getDriver().findElement(MASSAGE_THAT_LOGIN_IS_SUCCESSFUL).isDisplayed();
 
     }
+
+    String searchWord = "Спазмалгон";
+    public void searchProduct() {
+        getDriver().findElement(SEARCH).sendKeys((searchWord), Keys.ENTER);
+    }
+
+    public void hoverOnProductCatalog() {
+        Actions actions = new Actions(getDriver());
+        waitUntilElementVisibility(MEDICINAL_PRODUCT_BUTTON);
+        WebElement productCatalogElement = getDriver().findElement(MEDICINAL_PRODUCT_BUTTON);
+        actions.moveToElement(productCatalogElement).perform();
+    }
+
+    public boolean isMedicinalProductsPopUpDisplayed() {
+        waitUntilElementVisibility(MEDICINAL_PRODUCTS_POP_UP);
+        return getDriver().findElement(MEDICINAL_PRODUCTS_POP_UP).isDisplayed();
+    }
+
+
 }
 
