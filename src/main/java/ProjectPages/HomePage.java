@@ -24,6 +24,8 @@ public class HomePage extends BasePage {
     private final By SEARCH = By.xpath("//input[@id='search']");
     private final By MEDICINAL_PRODUCT_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/shop/lekarstvennyie-preparatyi']");
     private final By MEDICINAL_PRODUCTS_POP_UP = By.xpath("//div[@class='mc__sub-dropdown']");
+
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -108,6 +110,13 @@ public class HomePage extends BasePage {
         waitUntilElementVisibility(MEDICINAL_PRODUCTS_POP_UP);
         return getDriver().findElement(MEDICINAL_PRODUCTS_POP_UP).isDisplayed();
     }
+
+    public void keywordSearchForMedicines() {
+        String Keyword = "Знеболюючі";
+        getDriver().findElement(SEARCH).sendKeys(Keyword, Keys.ENTER);
+    }
+
+
 
 
 }
