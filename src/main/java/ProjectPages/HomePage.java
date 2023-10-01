@@ -24,8 +24,11 @@ public class HomePage extends BasePage {
     private final By SEARCH = By.xpath("//input[@id='search']");
     private final By MEDICINAL_PRODUCT_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/shop/lekarstvennyie-preparatyi']");
     private final By MEDICINAL_PRODUCTS_POP_UP = By.xpath("//div[@class='mc__sub-dropdown']");
-
-
+    private final By CATALOG_MENU_CATEGORY_BUTTON = By.xpath("//a[@class='menu-catalog__item']");
+    private final By ERROR_MASSAGE_IN_NEGATIVE_LOGIN = By.xpath("//p[text()='Введені логін або пароль не знайдені']");
+    private final By CHANGE_LANGUAGE_BUTTON = By.xpath("//span[text()='RU']");
+   private final By DISCOUNTS = By.xpath("//a[@class='menu-catalog__item actions']");
+   private final By CONTACTS_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/company/kontaktyi']");
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -76,6 +79,7 @@ public class HomePage extends BasePage {
     }
 
     public void enterEmailOrNumberButton() {
+        waitUntilElementVisibility(EMAIL_OR_NUMBER_BUTTON);
         getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys("bespalko140300@gmail.com");
     }
 
@@ -114,6 +118,49 @@ public class HomePage extends BasePage {
     public void keywordSearchForMedicines() {
         String Keyword = "Знеболюючі";
         getDriver().findElement(SEARCH).sendKeys(Keyword, Keys.ENTER);
+    }
+
+    public void clickOnCatalogMenuCategory(int productIndex) {
+        waitUntilElementVisibility(CATALOG_MENU_CATEGORY_BUTTON);
+        getDriver().findElements(CATALOG_MENU_CATEGORY_BUTTON).get(productIndex - 1).click();
+    }
+
+    String Word = "Вітаміни та бади";
+    public void searchProductForFilters() {
+        getDriver().findElement(SEARCH).sendKeys((Word), Keys.ENTER);
+    }
+
+    public void enterEmailOrNumberButtonForNegativeTest() {
+        waitUntilElementVisibility(EMAIL_OR_NUMBER_BUTTON);
+        getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys("karinamarina@gmail.com");
+    }
+
+    public void enterPasswordButtonForNegativeTest() {
+        getDriver().findElement(PASSWORD_BUTTON_IN_INPUT).sendKeys("123456");
+    }
+
+    public boolean isErrorMassageDisplayed() {
+        waitUntilElementVisibility(ERROR_MASSAGE_IN_NEGATIVE_LOGIN);
+        return getDriver().findElement(ERROR_MASSAGE_IN_NEGATIVE_LOGIN).isDisplayed();
+    }
+
+    public void changeLanguage() {
+        waitUntilElementVisibility(CHANGE_LANGUAGE_BUTTON);
+        getDriver().findElement(CHANGE_LANGUAGE_BUTTON).click();
+
+    }
+
+    public boolean isLanguageChange() {
+        String currentUrl = getDriver().getCurrentUrl();
+        return currentUrl.contains("/ua");
+    }
+
+    public void discountsButtonClick() {
+        getDriver().findElement(DISCOUNTS).click();
+    }
+
+    public void clickOnContactsButton() {
+        getDriver().findElement(CONTACTS_BUTTON).click();
     }
 
 
