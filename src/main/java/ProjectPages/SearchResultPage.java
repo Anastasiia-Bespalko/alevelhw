@@ -9,7 +9,7 @@ public class SearchResultPage extends BasePage{
     private final By SEARCH_RESULT_TITLE = By.xpath("//h1[text()='Спазмалгон']");
     private final By KEYWORD_SEARCH_MATCH_BUTTON = By.xpath("//span[@class='search-indexes__name']");
     private final By LICARSKI_ZASOBY_TITLE = By.xpath("//h1[text()='Лікарські засоби']");
-    private final By SPAZMALGON_SEARCH_PRODUCT = By.xpath("//div[@class='b-prod__tile']");
+    private final By SPAZMALGON_SEARCH_PRODUCT = By.xpath("//div[@class='wrp-colgroup__margins wrp-colgroup__margins-catalog mb35'] //div[@class='b-prod__tile-container']");
     private final By ADD_TO_CARD_BUTTON = By.xpath("//a[@class='btn btn-accent btn-xl']");
     private final By PLACE_AN_ORDER_BUTTON = By.xpath("//a[@class='btn btn-l fr btn-accent']");
     private final By BABY_DIAPERS_AND_DIAPERS_BUTTON = By.xpath("//b[text()='Дитячі підгузки та пелюшки']");
@@ -72,4 +72,5 @@ public class SearchResultPage extends BasePage{
     public boolean isDiscountsDisplayed() {
         return getDriver().findElement(OFFER_WITH_DISCOUNTS).isDisplayed();
     }
+
 }

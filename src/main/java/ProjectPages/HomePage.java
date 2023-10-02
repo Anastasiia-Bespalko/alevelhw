@@ -30,6 +30,8 @@ public class HomePage extends BasePage {
    private final By DISCOUNTS = By.xpath("//a[@class='menu-catalog__item actions']");
    private final By CONTACTS_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/company/kontaktyi']");
    private final By ITEMS_CATALOG = By.cssSelector("[class='fl j-main-catalog-menu main-catalog-menu']");
+
+
    public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -101,6 +103,7 @@ public class HomePage extends BasePage {
 
     String searchWord = "Спазмалгон";
     public void searchProduct() {
+        waitUntilElementVisibility(SEARCH);
         getDriver().findElement(SEARCH).sendKeys((searchWord), Keys.ENTER);
     }
 
@@ -163,6 +166,7 @@ public class HomePage extends BasePage {
     public void clickOnContactsButton() {
         getDriver().findElement(CONTACTS_BUTTON).click();
     }
+
 
 
 
