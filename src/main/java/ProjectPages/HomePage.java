@@ -30,7 +30,7 @@ public class HomePage extends BasePage {
    private final By DISCOUNTS = By.xpath("//a[@class='menu-catalog__item actions']");
    private final By CONTACTS_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/company/kontaktyi']");
    private final By ITEMS_CATALOG = By.cssSelector("[class='fl j-main-catalog-menu main-catalog-menu']");
-
+   private final By PRIVATE_OFFICE = By.xpath("//div[@class='personal-area__user-name-holder']");
 
    public HomePage(WebDriver driver) {
         super(driver);
@@ -167,7 +167,10 @@ public class HomePage extends BasePage {
         getDriver().findElement(CONTACTS_BUTTON).click();
     }
 
-
+    public void clickOnPrivateOfficeButton() {
+        waitUntilElementVisibility(PRIVATE_OFFICE);
+        getDriver().findElement(PRIVATE_OFFICE).click();
+    }
 
 
 
