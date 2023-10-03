@@ -11,6 +11,7 @@ public class BaseTests {
     public void driverInitialization() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
         driver.get("https://apteka911.ua/ua");
     }
 
