@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Test from package]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Tests from package(failed)">
+    <classes>
+      <class name="tests.HomePageTests">
+        <methods>
+          <include name="verifyCatalogPopUpAppears"/>
+          <include name="driverInitialization"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- tests.HomePageTests -->
+    </classes>
+  </test> <!-- Tests from package(failed) -->
+</suite> <!-- Failed suite [Test from package] -->
