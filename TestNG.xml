@@ -4,6 +4,8 @@
     <test name="Tests from package">
         <classes>
             <class name="tests.HomePageTests"/>
+            <class name="tests.ProductDetailsPageTests"/>
+            <class name="tests.SearchResultPageTests"/>
         </classes>
     </test>
 </suite>
