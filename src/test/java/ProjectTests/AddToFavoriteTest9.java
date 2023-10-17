@@ -9,23 +9,25 @@ import org.testng.annotations.Test;
 
 public class AddToFavoriteTest9 extends BaseTests{
     @Test
-public void addToFavoriteTest() {
+     public void addToFavoriteTest() {
+       String emailInput = "bespalko140300@gmail.com";
+       String passwordInput = "password";
 
-        HomePage homePage = new HomePage(getWebDriver());
-        homePage.clickOnInputButton();
-        homePage.clickOnLoginButton();
-        homePage.enterEmailOrNumberButton();
-        homePage.enterPasswordButton();
-        homePage.inputInPersonalAccountClick();
-        homePage.clickOnCatalogMenuCategory(5);
+       HomePage homePage = new HomePage(getWebDriver());
+       homePage.clickOnInputButton();
+       homePage.clickOnLoginButton();
+       homePage.enterEmailOrNumberButton(emailInput);
+       homePage.enterPasswordButton(passwordInput);
+       homePage.inputInPersonalAccountClick();
+       homePage.clickOnCatalogMenuCategory(5);
 
-        SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
-        searchResultPage.clickOnMedicalEquipmentButton();
+       SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
+       searchResultPage.clickOnMedicalEquipmentButton();
 
-        ProductListingPage productListingPage = new ProductListingPage(getWebDriver());
-        productListingPage.clickOnTheProduct(1);
+       ProductListingPage productListingPage = new ProductListingPage(getWebDriver());
+       productListingPage.clickOnTheProduct(1);
 
-        ProductDetailsPage productDetailsPage = new ProductDetailsPage(getWebDriver());
-        productDetailsPage.clickOnFavoritesButtonAndAdd(4);
+       ProductDetailsPage productDetailsPage = new ProductDetailsPage(getWebDriver());
+       productDetailsPage.clickOnFavoritesButtonAndAdd(4);
     }
 }

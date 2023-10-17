@@ -27,12 +27,13 @@ public class HomePage extends BasePage {
     private final By CATALOG_MENU_CATEGORY_BUTTON = By.cssSelector("[class='menu-catalog__item']");
     private final By ERROR_MASSAGE_IN_NEGATIVE_LOGIN = By.xpath("//p[text()='Введені логін або пароль не знайдені']");
     private final By CHANGE_LANGUAGE_BUTTON = By.xpath("//span[text()='RU']");
-   private final By DISCOUNTS = By.xpath("//a[@class='menu-catalog__item actions']");
-   private final By CONTACTS_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/company/kontaktyi']");
-   private final By ITEMS_CATALOG = By.cssSelector("[class='fl j-main-catalog-menu main-catalog-menu']");
-   private final By PRIVATE_OFFICE = By.xpath("//div[@class='personal-area__user-name-holder']");
-   private final By REMIND_PASSWORD = By.xpath("//a[@href='https://apteka911.ua/ua/account/recovery']");
-   public HomePage(WebDriver driver) {
+    private final By DISCOUNTS = By.xpath("//a[@class='menu-catalog__item actions']");
+    private final By CONTACTS_BUTTON = By.xpath("//a[@href='https://apteka911.ua/ua/company/kontaktyi']");
+    private final By ITEMS_CATALOG = By.cssSelector("[class='fl j-main-catalog-menu main-catalog-menu']");
+    private final By PRIVATE_OFFICE = By.xpath("//div[@class='personal-area__user-name-holder']");
+    private final By REMIND_PASSWORD = By.xpath("//a[@href='https://apteka911.ua/ua/account/recovery']");
+
+    public HomePage(WebDriver driver) {
         super(driver);
     }
 
@@ -48,23 +49,23 @@ public class HomePage extends BasePage {
 
     public void nameInput() {
         waitUntilElementVisibility(NAME_BUTTON_IN_REGISTRATION);
-        getDriver().findElement(NAME_BUTTON_IN_REGISTRATION).sendKeys(faker.name().firstName());
+        getDriver().findElement(NAME_BUTTON_IN_REGISTRATION).sendKeys(getFaker().name().firstName());
     }
 
     public void lastNameInput() {
-        getDriver().findElement(LAST_BUTTON__NAME_IN_REGISTRATION).sendKeys(faker.name().lastName());
+        getDriver().findElement(LAST_BUTTON__NAME_IN_REGISTRATION).sendKeys(getFaker().name().lastName());
     }
 
     public void phoneNumberInput() {
-        getDriver().findElement(PHONE_BUTTON__NUMBER_IN_REGISTRATION).sendKeys(faker.phoneNumber().cellPhone());
+        getDriver().findElement(PHONE_BUTTON__NUMBER_IN_REGISTRATION).sendKeys(getFaker().phoneNumber().cellPhone());
     }
 
     public void emailInput() {
-        getDriver().findElement(EMAIL_BUTTON__IN_REGISTRATION).sendKeys(faker.internet().emailAddress());
+        getDriver().findElement(EMAIL_BUTTON__IN_REGISTRATION).sendKeys(getFaker().internet().emailAddress());
     }
 
     public void passwordInput() {
-        getDriver().findElement(PASSWORD_BUTTON_iN_REGISTRATION).sendKeys(faker.internet().password());
+        getDriver().findElement(PASSWORD_BUTTON_iN_REGISTRATION).sendKeys(getFaker().internet().password());
     }
 
     public void clickOnRegistration() {
@@ -81,13 +82,13 @@ public class HomePage extends BasePage {
         getDriver().findElement(INPUT_POP_UP_LOGIN_BUTTON).click();
     }
 
-    public void enterEmailOrNumberButton() {
+    public void enterEmailOrNumberButton(String email) {
         waitUntilElementVisibility(EMAIL_OR_NUMBER_BUTTON);
-        getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys("bespalko140300@gmail.com");
+        getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys(email);
     }
 
-    public void enterPasswordButton() {
-        getDriver().findElement(PASSWORD_BUTTON_IN_INPUT).sendKeys("password");
+    public void enterPasswordButton(String passwordInput) {
+        getDriver().findElement(PASSWORD_BUTTON_IN_INPUT).sendKeys(passwordInput);
     }
 
     public void inputInPersonalAccountClick() {
@@ -98,11 +99,9 @@ public class HomePage extends BasePage {
     public boolean isMassageOfInputDisplayed() {
         waitUntilElementVisibility(MASSAGE_THAT_LOGIN_IS_SUCCESSFUL);
         return getDriver().findElement(MASSAGE_THAT_LOGIN_IS_SUCCESSFUL).isDisplayed();
-
     }
 
-    String searchWord = "Спазмалгон";
-    public void searchProduct() {
+    public void searchProduct(String searchWord) {
         waitUntilElementVisibility(SEARCH);
         getDriver().findElement(SEARCH).sendKeys((searchWord), Keys.ENTER);
     }
@@ -119,8 +118,7 @@ public class HomePage extends BasePage {
         return getDriver().findElement(MEDICINAL_PRODUCTS_POP_UP).isDisplayed();
     }
 
-    public void keywordSearchForMedicines() {
-        String Keyword = "Знеболюючі";
+    public void keywordSearchForMedicines(String Keyword) {
         getDriver().findElement(SEARCH).sendKeys(Keyword, Keys.ENTER);
     }
 
@@ -129,18 +127,18 @@ public class HomePage extends BasePage {
         getDriver().findElement(ITEMS_CATALOG).findElements(CATALOG_MENU_CATEGORY_BUTTON).get(productIndex - 1).click();
     }
 
-    String Word = "Вітаміни та бади";
-    public void searchProductForFilters() {
+    public void searchProductForFilters(String Word) {
         getDriver().findElement(SEARCH).sendKeys((Word), Keys.ENTER);
     }
 
-    public void enterEmailOrNumberButtonForNegativeTest() {
+    public void enterEmailOrNumberButtonForNegativeTest(String email) {
         waitUntilElementVisibility(EMAIL_OR_NUMBER_BUTTON);
-        getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys("karinamarina@gmail.com");
+        getDriver().findElement(EMAIL_OR_NUMBER_BUTTON).sendKeys(email);
     }
 
-    public void enterPasswordButtonForNegativeTest() {
-        getDriver().findElement(PASSWORD_BUTTON_IN_INPUT).sendKeys("123456");
+    public void enterPasswordButtonForNegativeTest(int password) {
+        String passwordString = Integer.toString(password);
+        getDriver().findElement(PASSWORD_BUTTON_IN_INPUT).sendKeys(passwordString);
     }
 
     public boolean isErrorMassageDisplayed() {
@@ -176,8 +174,5 @@ public class HomePage extends BasePage {
         waitUntilElementVisibility(REMIND_PASSWORD);
         getDriver().findElement(REMIND_PASSWORD).click();
     }
-
-
-
 }
 

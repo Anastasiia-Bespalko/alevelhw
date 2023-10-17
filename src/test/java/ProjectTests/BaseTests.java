@@ -22,7 +22,6 @@ public class BaseTests {
     public WebDriver getWebDriver() {
         return driver;
     }
-
 }
 
 

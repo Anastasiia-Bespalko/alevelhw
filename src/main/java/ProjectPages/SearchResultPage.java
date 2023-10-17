@@ -3,8 +3,6 @@ package ProjectPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import javax.swing.plaf.PanelUI;
-
 public class SearchResultPage extends BasePage{
     private final By SEARCH_RESULT_TITLE = By.xpath("//h1[text()='Спазмалгон']");
     private final By KEYWORD_SEARCH_MATCH_BUTTON = By.xpath("//span[@class='search-indexes__name']");
@@ -17,7 +15,7 @@ public class SearchResultPage extends BasePage{
     private final By PUT_A_FILTER_ON_A_PRODUCT_GROUP = By.xpath("//i[@class='fl icon-check']");
     private final By FILTER_VITAMINS_AND_SUPPLEMENTS = By.xpath("//a[text()='Вітаміни та БАДи']");
     private final By OFFER_WITH_DISCOUNTS = By.xpath("//div[@class='content__shadow']");
-
+    private final By ANALGIN_PRODUCT = By.xpath("//img[@title='Купити Анальгін-Дарниця табл. 500мг №10']");
     public SearchResultPage(WebDriver driver) {
         super(driver);
     }
@@ -73,4 +71,8 @@ public class SearchResultPage extends BasePage{
         return getDriver().findElement(OFFER_WITH_DISCOUNTS).isDisplayed();
     }
 
+    public void clickOnAnalginProduct() {
+        waitUntilElementVisibility(ANALGIN_PRODUCT);
+        getDriver().findElement(ANALGIN_PRODUCT).click();
+    }
 }

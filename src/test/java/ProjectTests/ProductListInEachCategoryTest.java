@@ -5,15 +5,13 @@ import ProjectPages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PromotionDisplayTest13 extends BaseTests{
-
+public class ProductListInEachCategoryTest extends BaseTests{
     @Test
-    public void promotionDisplayTest() {
-
+    public void productListInEachCategoryTest() {
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.discountsButtonClick();
+        homePage.clickOnCatalogMenuCategory(1);
 
         SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
-        Assert.assertTrue(searchResultPage.isDiscountsDisplayed(), "Discounts isn't found");
+        Assert.assertTrue(searchResultPage.isTitleMenuCategoryDisplayed(), "title isn't displayed");
     }
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ProductListingPage extends BasePage{
     private final By SEARCH_RESULT_TITLE_OF_KEYWORD = By.xpath("//h1[text()='Знеболюючі препарати']");
-   private final By DISPOSABLE_DIAPERS_BUTTON = By.xpath("//b[text()='Одноразові підгузки']");
+    private final By DISPOSABLE_DIAPERS_BUTTON = By.xpath("//b[text()='Одноразові підгузки']");
     private final By PRODUCT_IN_MEDICAL_EQUIPMENT = By.xpath("//a[@class='b-prod__thumb']");
     public ProductListingPage(WebDriver driver) {
         super(driver);

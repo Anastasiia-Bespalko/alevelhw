@@ -30,6 +30,9 @@ public class ProductDetailsPage extends BasePage{
     private final By PACKAGING = By.xpath("//div[@class='collapsible-heading open-block'] //h2[text()='Упаковка']");
     private final By CATEGORY_OF_RELEASE = By.xpath("//div[@class='collapsible-heading open-block'] //h2[text()='Категорія відпуску']");
     private final By MANUFACTURER = By.xpath("//div[@class='collapsible-heading open-block'] //h2[text()='Виробник']");
+    private final By CARD_BUTTON = By.xpath("//a[@class='btn btn-accent btn-xl']");
+    private final By CLOSE_POP_UP_BUTTON_IN_ADD_TO_CARD = By.xpath("//div[@class='modal modal-added-cart modal-added-cart-recommended'] //a[@class='close']");
+    private final By BASKET_BUTTON = By.xpath("//a[@class='cart nav-link active']");
     public ProductDetailsPage(WebDriver driver) {
         super(driver);
     }
@@ -64,7 +67,6 @@ public class ProductDetailsPage extends BasePage{
     public void clickOnInstructionButton() {
         getDriver().findElement(MANUFACTURERS_INSTRUCTION_BUTTON).click();
     }
-
 
     public boolean checkThatWarehouseDisplayed(int productIndex) {
         return getDriver().findElements(WAREHOUSE).get(productIndex - 1).isDisplayed();
@@ -134,9 +136,17 @@ public class ProductDetailsPage extends BasePage{
         return getDriver().findElement(MANUFACTURER).isDisplayed();
     }
 
+    public void clickOnCardButton() {
+        waitUntilElementVisibility(CARD_BUTTON);
+        getDriver().findElement(CARD_BUTTON).click();
+    }
 
+    public void closePopUpButtonInAddToCard() {
+        waitUntilElementVisibility(CLOSE_POP_UP_BUTTON_IN_ADD_TO_CARD);
+        getDriver().findElement(CLOSE_POP_UP_BUTTON_IN_ADD_TO_CARD).click();
+    }
 
-
-
-
+    public void clickOnBasketButton() {
+        getDriver().findElement(BASKET_BUTTON).click();
+    }
 }

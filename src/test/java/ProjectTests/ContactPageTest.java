@@ -5,11 +5,9 @@ import ProjectPages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ContactPageTest14 extends BaseTests{
-
+public class ContactPageTest extends BaseTests{
     @Test
     public void contactPageTest() {
-
         HomePage homePage = new HomePage(getWebDriver());
         homePage.clickOnContactsButton();
 

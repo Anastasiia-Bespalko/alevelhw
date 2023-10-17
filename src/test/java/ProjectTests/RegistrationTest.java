@@ -4,7 +4,7 @@ import ProjectPages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class RegistrationTest1 extends BaseTests{
+public class RegistrationTest extends BaseTests{
     @Test
     public void registrationOnSite() {
         HomePage homePage = new HomePage(getWebDriver());
@@ -18,6 +18,5 @@ public class RegistrationTest1 extends BaseTests{
         homePage.clickOnRegistration();
 
         Assert.assertTrue(homePage.isErrorElementDisplayed(), "error is not found");
-
     }
 }

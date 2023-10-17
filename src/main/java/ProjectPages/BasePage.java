@@ -10,13 +10,11 @@ import java.time.Duration;
 
 public class BasePage {
     private WebDriver driver;
-    protected Faker faker;
-
+    private Faker faker;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         faker = new Faker();
-
     }
     public void waitUntilElementVisibility(By element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -26,5 +24,10 @@ public class BasePage {
     public WebDriver getDriver() {
         return driver;
     }
+
+    public Faker getFaker() {
+        return faker;
+    }
 }
+
 

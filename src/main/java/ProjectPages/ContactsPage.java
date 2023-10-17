@@ -24,12 +24,4 @@ public class ContactsPage extends BasePage{
     public boolean isServiceQualityControlServiceNumberDisplayed() {
         return getDriver().findElement(SERVICE_QUALITY_CONTROL_SERVICE).isDisplayed();
     }
-
-
-
-
-
-
-
-
 }

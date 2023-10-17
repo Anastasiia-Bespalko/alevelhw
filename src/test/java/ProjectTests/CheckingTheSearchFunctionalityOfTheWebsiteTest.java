@@ -6,13 +6,13 @@ import ProjectPages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckingTheSearchFunctionalityOfTheWebsiteTest5 extends BaseTests{
-
+public class CheckingTheSearchFunctionalityOfTheWebsiteTest extends BaseTests{
     @Test
     public void checkingTheSearchFunctionalityOfTheWebsite() {
+        String Keyword = "Знеболюючі";
 
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.keywordSearchForMedicines();
+        homePage.keywordSearchForMedicines(Keyword);
 
         SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
         searchResultPage.clickToTheKeywordSearchMatchButton();

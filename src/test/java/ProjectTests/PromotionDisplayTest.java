@@ -5,16 +5,13 @@ import ProjectPages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MedicationSearchTest3 extends BaseTests{
-
+public class PromotionDisplayTest extends BaseTests{
     @Test
-
-    public void medicationSearch() {
+    public void promotionDisplayTest() {
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.searchProduct();
+        homePage.discountsButtonClick();
 
         SearchResultPage searchResultPage = new SearchResultPage(getWebDriver());
-        Assert.assertTrue(searchResultPage.isSearchResultCorrect(), "Title is not correct");
-
+        Assert.assertTrue(searchResultPage.isDiscountsDisplayed(), "Discounts isn't found");
     }
 }
