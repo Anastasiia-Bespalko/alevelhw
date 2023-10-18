@@ -2,48 +2,48 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-17T22:01:05 EEST" name="Test from package" finished-at="2023-10-17T22:01:34 EEST" duration-ms="28379">
+  <suite started-at="2023-10-18T19:17:56 EEST" name="Test from package" finished-at="2023-10-18T19:18:28 EEST" duration-ms="31828">
     <groups>
     </groups>
-    <test started-at="2023-10-17T22:01:05 EEST" name="Tests from package" finished-at="2023-10-17T22:01:34 EEST" duration-ms="28379">
+    <test started-at="2023-10-18T19:17:56 EEST" name="Tests from package" finished-at="2023-10-18T19:18:28 EEST" duration-ms="31828">
       <class name="tests.SearchResultPageTests">
-        <test-method is-config="true" signature="driverInitialization()[pri:0, instance:tests.SearchResultPageTests@989da1]" started-at="2023-10-17T22:01:27 EEST" name="driverInitialization" finished-at="2023-10-17T22:01:32 EEST" duration-ms="5220" status="PASS">
+        <test-method is-config="true" signature="driverInitialization()[pri:0, instance:tests.SearchResultPageTests@963176]" started-at="2023-10-18T19:18:18 EEST" name="driverInitialization" finished-at="2023-10-18T19:18:26 EEST" duration-ms="7571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitialization -->
-        <test-method signature="verifyThatSearchResultPageTitleIsCorrect()[pri:0, instance:tests.SearchResultPageTests@989da1]" started-at="2023-10-17T22:01:32 EEST" name="verifyThatSearchResultPageTitleIsCorrect" finished-at="2023-10-17T22:01:34 EEST" duration-ms="1820" status="PASS">
+        <test-method signature="verifyThatSearchResultPageTitleIsCorrect()[pri:0, instance:tests.SearchResultPageTests@963176]" started-at="2023-10-18T19:18:26 EEST" name="verifyThatSearchResultPageTitleIsCorrect" finished-at="2023-10-18T19:18:28 EEST" duration-ms="1876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyThatSearchResultPageTitleIsCorrect -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.SearchResultPageTests@989da1]" started-at="2023-10-17T22:01:34 EEST" name="closeDriver" finished-at="2023-10-17T22:01:34 EEST" duration-ms="99" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.SearchResultPageTests@963176]" started-at="2023-10-18T19:18:28 EEST" name="closeDriver" finished-at="2023-10-18T19:18:28 EEST" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- tests.SearchResultPageTests -->
       <class name="tests.HomePageTests">
-        <test-method is-config="true" signature="driverInitialization()[pri:0, instance:tests.HomePageTests@7bef452c]" started-at="2023-10-17T22:01:05 EEST" name="driverInitialization" finished-at="2023-10-17T22:01:12 EEST" duration-ms="6329" status="PASS">
+        <test-method is-config="true" signature="driverInitialization()[pri:0, instance:tests.HomePageTests@5aae8eb5]" started-at="2023-10-18T19:17:56 EEST" name="driverInitialization" finished-at="2023-10-18T19:18:05 EEST" duration-ms="8935" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitialization -->
-        <test-method signature="verifyCatalogPopUpAppears()[pri:0, instance:tests.HomePageTests@7bef452c]" started-at="2023-10-17T22:01:12 EEST" name="verifyCatalogPopUpAppears" description="Catalog pop up arrears after clicking on catalog button" finished-at="2023-10-17T22:01:15 EEST" duration-ms="3249" status="PASS">
+        <test-method signature="verifyCatalogPopUpAppears()[pri:0, instance:tests.HomePageTests@5aae8eb5]" started-at="2023-10-18T19:18:06 EEST" name="verifyCatalogPopUpAppears" description="Catalog pop up arrears after clicking on catalog button" finished-at="2023-10-18T19:18:07 EEST" duration-ms="1117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCatalogPopUpAppears -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.HomePageTests@7bef452c]" started-at="2023-10-17T22:01:15 EEST" name="closeDriver" finished-at="2023-10-17T22:01:15 EEST" duration-ms="152" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.HomePageTests@5aae8eb5]" started-at="2023-10-18T19:18:07 EEST" name="closeDriver" finished-at="2023-10-18T19:18:07 EEST" duration-ms="238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- tests.HomePageTests -->
       <class name="tests.ProductDetailsPageTests">
-        <test-method is-config="true" signature="driverInitialization()[pri:0, instance:tests.ProductDetailsPageTests@67001148]" started-at="2023-10-17T22:01:15 EEST" name="driverInitialization" finished-at="2023-10-17T22:01:22 EEST" duration-ms="6858" status="PASS">
+        <test-method is-config="true" signature="driverInitialization()[pri:0, instance:tests.ProductDetailsPageTests@49aa766b]" started-at="2023-10-18T19:18:07 EEST" name="driverInitialization" finished-at="2023-10-18T19:18:13 EEST" duration-ms="5614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitialization -->
-        <test-method signature="verifyThatNavigatedToTheCorrectProductDetailsPage()[pri:0, instance:tests.ProductDetailsPageTests@67001148]" started-at="2023-10-17T22:01:22 EEST" name="verifyThatNavigatedToTheCorrectProductDetailsPage" finished-at="2023-10-17T22:01:26 EEST" duration-ms="4207" status="PASS">
+        <test-method signature="verifyThatNavigatedToTheCorrectProductDetailsPage()[pri:0, instance:tests.ProductDetailsPageTests@49aa766b]" started-at="2023-10-18T19:18:13 EEST" name="verifyThatNavigatedToTheCorrectProductDetailsPage" finished-at="2023-10-18T19:18:18 EEST" duration-ms="5623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyThatNavigatedToTheCorrectProductDetailsPage -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.ProductDetailsPageTests@67001148]" started-at="2023-10-17T22:01:26 EEST" name="closeDriver" finished-at="2023-10-17T22:01:27 EEST" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:tests.ProductDetailsPageTests@49aa766b]" started-at="2023-10-18T19:18:18 EEST" name="closeDriver" finished-at="2023-10-18T19:18:18 EEST" duration-ms="187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
