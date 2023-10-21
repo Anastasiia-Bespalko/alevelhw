@@ -1,16 +1,17 @@
+import dto.PetDTO;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.given;
-
-public class GetPetTests {
-    private final String BASE_SERVER_URL = "https://petstore.swagger.io/v2/pet/";
+public class GetPetTests extends BaseTest{
     @Test
     public void getPetTest() {
-        int petId = 3;
+        int petId = 7;
 
-        Response response = given().when().get(BASE_SERVER_URL + petId);
-        System.out.println(response.asPrettyString());
+        Response response = getRestClient().getEntity(petId);
+        PetDTO pet = response.as(PetDTO.class);
+        Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(pet.getId(), petId);
 
     }
 }
