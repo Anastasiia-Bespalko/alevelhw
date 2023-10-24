@@ -7,7 +7,7 @@ import ProjectPages.SearchResultPage;
 import org.testng.annotations.Test;
 
 
-public class AddToFavoriteTest9 extends BaseTests{
+public class AddToFavoriteTest extends BaseTests{
     @Test
      public void addToFavoriteTest() {
        String emailInput = "bespalko140300@gmail.com";

@@ -19,5 +19,4 @@ public class InvalidLoginTest extends BaseTests{
 
         Assert.assertTrue(homePage.isErrorMassageDisplayed(), "error massage isn't displayed");
     }
-
 }
