@@ -3,6 +3,7 @@ package ProjectTests;
 import ProjectPages.HomePage;
 import ProjectPages.ProductListingPage;
 import ProjectPages.SearchResultPage;
+import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

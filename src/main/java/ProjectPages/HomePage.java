@@ -1,5 +1,6 @@
 package ProjectPages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -118,6 +119,7 @@ public class HomePage extends BasePage {
         return getDriver().findElement(MEDICINAL_PRODUCTS_POP_UP).isDisplayed();
     }
 
+    @Step("")
     public void keywordSearchForMedicines(String Keyword) {
         getDriver().findElement(SEARCH).sendKeys(Keyword, Keys.ENTER);
     }
