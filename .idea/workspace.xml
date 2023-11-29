@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ffe70c6-9119-4b19-ba6e-73cc2462d8d1" name="Changes" comment="my project" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="MY_PROJECT" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2W2NdivbxP8Lv1nmNPcXBLfMiIk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Homeworks&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ProjectPages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="hw" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="hw" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/user/Desktop/hw/TestNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/TestNG.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckingTheSearchFunctionalityOfTheWebsiteTest.checkingTheSearchFunctionalityOfTheWebsite" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProjectTests" />
+      <option name="MAIN_CLASS_NAME" value="ProjectTests.CheckingTheSearchFunctionalityOfTheWebsiteTest" />
+      <option name="METHOD_NAME" value="checkingTheSearchFunctionalityOfTheWebsite" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonalAccountLoginTest.loginPersonalAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProjectTests" />
+      <option name="MAIN_CLASS_NAME" value="ProjectTests.PersonalAccountLoginTest" />
+      <option name="METHOD_NAME" value="loginPersonalAccount" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerificationThatTheManufacturersInstructionsArePresentWithTheProductTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProjectTests" />
+      <option name="MAIN_CLASS_NAME" value="ProjectTests.VerificationThatTheManufacturersInstructionsArePresentWithTheProductTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerificationThatTheManufacturersInstructionsArePresentWithTheProductTest.verificationThatTheManufacturersInstructionsArePresentWithTheProductTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProjectTests" />
+      <option name="MAIN_CLASS_NAME" value="ProjectTests.VerificationThatTheManufacturersInstructionsArePresentWithTheProductTest" />
+      <option name="METHOD_NAME" value="verificationThatTheManufacturersInstructionsArePresentWithTheProductTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.VerificationThatTheManufacturersInstructionsArePresentWithTheProductTest.verificationThatTheManufacturersInstructionsArePresentWithTheProductTest" />
+        <item itemvalue="TestNG.CheckingTheSearchFunctionalityOfTheWebsiteTest.checkingTheSearchFunctionalityOfTheWebsite" />
+        <item itemvalue="TestNG.PersonalAccountLoginTest.loginPersonalAccount" />
+        <item itemvalue="TestNG.C:/Users/user/Desktop/hw/TestNG.xml" />
+        <item itemvalue="TestNG.VerificationThatTheManufacturersInstructionsArePresentWithTheProductTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ffe70c6-9119-4b19-ba6e-73cc2462d8d1" name="Changes" comment="" />
+      <created>1695926803988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695926803988</updated>
+    </task>
+    <task id="LOCAL-00001" summary="my project">
+      <option name="closed" value="true" />
+      <created>1695929106019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695929106019</updated>
+    </task>
+    <task id="LOCAL-00002" summary="my project">
+      <option name="closed" value="true" />
+      <created>1695933532921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695933532921</updated>
+    </task>
+    <task id="LOCAL-00003" summary="my project">
+      <option name="closed" value="true" />
+      <created>1695933637033</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695933637033</updated>
+    </task>
+    <task id="LOCAL-00004" summary="my project">
+      <option name="closed" value="true" />
+      <created>1695935233351</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695935233351</updated>
+    </task>
+    <task id="LOCAL-00005" summary="my project">
+      <option name="closed" value="true" />
+      <created>1695983360844</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695983360844</updated>
+    </task>
+    <task id="LOCAL-00006" summary="my project">
+      <option name="closed" value="true" />
+      <created>1695999107497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695999107497</updated>
+    </task>
+    <task id="LOCAL-00007" summary="my project">
+      <option name="closed" value="true" />
+      <created>1696013732654</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696013732654</updated>
+    </task>
+    <task id="LOCAL-00008" summary="my project">
+      <option name="closed" value="true" />
+      <created>1696177126943</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696177126943</updated>
+    </task>
+    <task id="LOCAL-00009" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1696194379698</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696194379698</updated>
+    </task>
+    <task id="LOCAL-00010" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1696265737849</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696265737849</updated>
+    </task>
+    <task id="LOCAL-00011" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1696268425818</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696268425818</updated>
+    </task>
+    <task id="LOCAL-00012" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1696344920439</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696344920439</updated>
+    </task>
+    <task id="LOCAL-00013" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1697567679398</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697567679398</updated>
+    </task>
+    <task id="LOCAL-00014" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1698084392949</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1698084392949</updated>
+    </task>
+    <task id="LOCAL-00015" summary="my project, PROBLEM IN TEST9">
+      <option name="closed" value="true" />
+      <created>1698085468708</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698085468708</updated>
+    </task>
+    <task id="LOCAL-00016" summary="my project">
+      <option name="closed" value="true" />
+      <created>1698144873339</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698144873339</updated>
+    </task>
+    <task id="LOCAL-00017" summary="my project">
+      <option name="closed" value="true" />
+      <created>1701253783472</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701253783472</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="my project, PROBLEM IN TEST9" />
+    <MESSAGE value="my project" />
+    <option name="LAST_COMMIT_MESSAGE" value="my project" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hw$ChangeLanguageTest12_changeLanguageTest.ic" NAME="ChangeLanguageTest12.changeLanguageTest Coverage Results" MODIFIED="1696173504075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ProjectTests.*</FILTER>
+    </SUITE>
+  </component>
+</project>

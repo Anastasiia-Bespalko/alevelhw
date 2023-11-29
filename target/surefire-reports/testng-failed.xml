@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Test from package]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="2" parallel="tests" name="Tests from package(failed)" verbose="0">
+    <classes>
+      <class name="ProjectTests.AddToFavoriteTest9">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="driverInitialization"/>
+          <include name="addToFavoriteTest"/>
+        </methods>
+      </class> <!-- ProjectTests.AddToFavoriteTest9 -->
+    </classes>
+  </test> <!-- Tests from package(failed) -->
+</suite> <!-- Failed suite [Test from package] -->

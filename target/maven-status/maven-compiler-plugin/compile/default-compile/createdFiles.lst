@@ -1,0 +1,10 @@
+ProjectPages\SearchResultPage.class
+ProjectPages\ContactsPage.class
+ProjectPages\PrivateOfficePage.class
+ProjectPages\ProductDetailsPage.class
+ProjectPages\ProductListingPage.class
+ProjectPages\BasePage.class
+ProjectPages\PasswordRecoveryPage.class
+ProjectPages\BasketPage.class
+ProjectPages\CheckoutPage.class
+ProjectPages\HomePage.class
