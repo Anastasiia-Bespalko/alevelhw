@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ffe70c6-9119-4b19-ba6e-73cc2462d8d1" name="Changes" comment="my project" />
+    <list default="true" id="0ffe70c6-9119-4b19-ba6e-73cc2462d8d1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +57,7 @@
       <recent name="ProjectPages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.C:/Users/user/Desktop/hw/TestNG.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="hw" />
       <method v="2">
@@ -309,6 +309,17 @@
     </task>
     <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="my project, PROBLEM IN TEST9" />
